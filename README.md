@@ -45,3 +45,9 @@ Go from list...
 6                        Neil James Innes             neil         james      innes
 8                        Adams, Douglas N          douglas             n      adams
 ```
+
+## Notebook hosts
+
+https://mybinder.readthedocs.io/en/latest/user-guidelines.html
+
+https://colab.research.google.com/
