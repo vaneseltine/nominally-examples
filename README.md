@@ -1,4 +1,12 @@
-# Examples for the **nominally** Python package
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vaneseltine/nominally/master/docs/_static/nominally_logo.png" alt="Nominally Logo" width=100 />
+</p>
+
+<h2 align="center">Nominally in Action: Examples and Snippets</h2>
+
+<h1 align="center">This repo is neither fully armed nor operational. Please come back in a few days. </h1>
+
 
 Nominally is a name parsing package for Python.
 
