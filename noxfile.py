@@ -21,6 +21,8 @@ PYTHONS = IN_CI and ["3.6", "3.7", "3.8"]
 
 @nox.session(python=PYTHONS)
 def test(session):
+    if PYTHONS:
+        session.install("-r", "requirements-dev.txt")
     session.run("python", "-m", "pytest", "-v", "-s")
 
 
