@@ -15,14 +15,15 @@ These examples are all available as [live Jupyter Notebooks hosted on binder](ht
 
 A short and sweet example creating and then processing a CSV from raw to parsed names.
 
-[![csv.ipynb on mybinder.org](https://img.shields.io/badge/launch_binder-csv-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=00274c)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fcsv.ipynb)
+[![csv.ipynb on mybinder.org](https://img.shields.io/badge/launch_binder-csv-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=ff4785)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fcsv.ipynb)
 
 ## Example II. Pandas Simple
 
 
 
-[![pandas_simple.ipynb on mybinder.org](https://img.shields.io/badge/launch%20binder-pandas_simple-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=00274c)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fpandas_simple.ipynb)
+[![pandas_simple.ipynb on mybinder.org](https://img.shields.io/badge/launch%20binder-pandas_simple-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=ff4785)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fpandas_simple.ipynb)
 
+#
 
 ## Nominally
 
