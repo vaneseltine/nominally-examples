@@ -51,4 +51,8 @@ https://mybinder.readthedocs.io/en/latest/user-guidelines.html
 
 https://colab.research.google.com/
 
-https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/ -->
+https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/ 
+
+https://www.opentechguides.com/how-to/article/dataanalytics/179/jupyter-notebook-pandas.html
+
+-->
