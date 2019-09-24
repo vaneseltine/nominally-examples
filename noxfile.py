@@ -15,12 +15,11 @@ nox.options.stop_on_first_error = True
 
 IN_CI = os.getenv("CI", "").lower() == "true"
 IN_WINDOWS = sys.platform.startswith("win")
-AT_HOME = not IN_CI and not IN_WINDOWS
 
-PYTHONS = ["3.6", "3.7", "3.8"]
+PYTHONS = IN_CI and ["3.6", "3.7", "3.8"]
 
 
-@nox.session(python=False)
+@nox.session(python=PYTHONS)
 def test(session):
     session.run("pytest", "-v", "-s")
 
