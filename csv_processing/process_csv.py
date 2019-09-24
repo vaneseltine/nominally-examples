@@ -37,7 +37,7 @@ pprint(parsed_basic)
 
 newline_arg = "" if sys.platform.startswith("win") else None
 with CSV_OUT.open("w", newline=newline_arg) as outfile:
-    writer = DictWriter(outfile, parsed_basic[0].keys())
+    writer = DictWriter(outfile, list(parsed_basic[0].keys()))
     writer.writeheader()
     writer.writerows(parsed_basic)
 print(f"Output to {CSV_OUT}")
