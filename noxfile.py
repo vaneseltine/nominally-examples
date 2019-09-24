@@ -19,30 +19,10 @@ AT_HOME = not IN_CI and not IN_WINDOWS
 
 PYTHONS = ["3.6", "3.7", "3.8"]
 
-NOTEBOOK_DIR = Path("./notebooks")
-TEST_DIR = Path("./test")
 
-notebooks = list(NOTEBOOK_DIR.glob("*.ipynb"))
-
-
-@nox.parametrize("nbook", notebooks)
 @nox.session(python=False)
-def check_output(session, nbook):
-    outfile = tempfile.NamedTemporaryFile()
-    outfilename = str(Path(outfile.name).with_suffix(".ipynb"))
-    infilename = str(nbook)
-    canonicalout = str(TEST_DIR / f"{Path(nbook).stem}_canonical.ipynb")
-    session.run(
-        "jupyter",
-        "nbconvert",
-        "--to",
-        "notebook",
-        "--execut",
-        "--output",
-        outfilename,
-        infilename,
-    )
-    session.run("diff", outfilename, canonicalout)
+def test(session):
+    session.run("pytest", "-v", "-s")
 
 
 # def supported_pythons(classifiers_in="setup.cfg"):
