@@ -7,9 +7,7 @@
 
 Nominally is a maximum-strength name parser for record linkage.
 
-
-These examples are all available as [live Jupyter Notebooks hosted on binder](https://nbviewer.jupyter.org/github/vaneseltine/nominally-examples/tree/master/). No download or installation is required. 
-
+These examples are all available as [live Jupyter Notebooks hosted on binder](https://nbviewer.jupyter.org/github/vaneseltine/nominally-examples/tree/master/notebooks/). No download or installation is required. 
 
 ### Example I. CSV
 
@@ -23,13 +21,12 @@ As Pandas is de rigueur:
 
 [![pandas_simple.ipynb on mybinder.org](https://img.shields.io/badge/launch%20binder-pandas_simple-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=ff4785)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fpandas_simple.ipynb)
 
-#
 
 ## Nominally
 
 #### Install
 
-The normal way installs the most recent release:
+The standard install will pull the most recent release from PyPI:
 
 `pip install nominally`
 
