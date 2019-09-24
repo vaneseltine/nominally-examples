@@ -1,3 +1,7 @@
 nominally
+
+jupyter
 matplotlib
+notebook
 pandas
+
