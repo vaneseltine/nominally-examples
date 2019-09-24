@@ -1,4 +1,3 @@
-import difflib
 import subprocess
 from pathlib import Path
 import re
@@ -15,7 +14,7 @@ notebooks = list(NOTEBOOK_DIR.glob("*.ipynb"))
 
 @pytest.mark.parametrize("infile", notebooks)
 def test_against_canonical(infile, tmp_path):
-    observed_out = Path(tmp_path.with_suffix(".ipynb"))
+    observed_out = tmp_path.with_suffix(".ipynb")
     canonical_out = TEST_DIR / f"{Path(infile).stem}_canonical.ipynb"
 
     cmd = [
@@ -32,21 +31,19 @@ def test_against_canonical(infile, tmp_path):
     nbconvert_result = subprocess.check_output(cmd)
     assert not nbconvert_result
 
-    books = [clean_nb(b) for b in [observed_out, canonical_out]]
-    for b in books:
-        assert len(b) > 100
-
-    diff = list(difflib.context_diff(*books))
-    print(diff)
-    assert not diff
+    assert not have_diffs(observed_out, canonical_out)
 
 
-def clean_nb(path):
-    lines = Path(path).read_text().lower().splitlines()
-    return [l for l in lines if not is_junk(l)]
+def have_diffs(*books):
+    bookslines = (Path(path).read_text().lower().splitlines() for path in books)
+    zippedlines = zip(*bookslines)
+    for line1, line2 in zippedlines:
+        if is_junk(line1) or is_junk(line2):
+            continue
+        assert line1 == line2
 
 
 def is_junk(l):
     plat_specific = re.search(r"version|export|path|\.csv", l)
     nothing = not re.search(r"[a-z]", l)
-    return bool(r)
+    return plat_specific or nothing
