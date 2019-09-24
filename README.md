@@ -5,49 +5,27 @@
 
 <h2 align="center">Nominally in Action: Examples and Snippets</h2>
 
-<h1 align="center">This repo is neither fully armed nor operational. Please come back in a few days. </h1>
-
-
-Nominally is a name parsing package for Python.
+Nominally is a maximum-strength name parser for record linkage.
 
 - Install: `pip install nominally`
 - Repository: https://github.com/vaneseltine/nominally/
 - Documentation: https://nominally.readthedocs.io/en/latest/
 
-## Notebook in Pandas
-A live example using Pandas:
-https://colab.research.google.com/gist/vaneseltine/964fc9dec60e59410b91bbcaf1fe2d11/nom_pandas.ipynb
+### Examples
 
-Go from list...
+https://mybinder.org/v2/gh/vaneseltine/nominally-examples/
 
-```
-# raw_names
-["Graham Arthur Chapman",
- "cleese, john m",
- "Gilliam, Terrence (Terry) Vance",
- "Eric Idle",
- 'Mr. Terence "Terry" Graham Parry Jones',
- "M E Palin",
- "Neil James Innes",
- "carol cleveland",
- "Adams, Douglas N"]
-```
-...to DataFrame in a couple simple notebook cells.
-```
-                                        0  title     first        middle       last  suffix  nickname
-0                   Graham Arthur Chapman           graham        arthur    chapman
-1                          cleese, john m             john             m     cleese
-2         Gilliam, Terrence (Terry) Vance         terrence         vance    gilliam             terry
-3                               Eric Idle             eric                     idle
-4  Mr. Terence "Terry" Graham Parry Jones     mr   terence  graham parry      jones             terry
-5                               M E Palin                m             e      palin
-7                         carol cleveland            carol                cleveland
-6                        Neil James Innes             neil         james      innes
-8                        Adams, Douglas N          douglas             n      adams
-```
+https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fpandas_simple.ipynb
 
-## Notebook hosts
+https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fcsv.ipynb
+
+
+
+
+<!-- ## Notebook hosts
 
 https://mybinder.readthedocs.io/en/latest/user-guidelines.html
 
 https://colab.research.google.com/
+
+https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/ -->
