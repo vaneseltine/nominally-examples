@@ -21,7 +21,7 @@ PYTHONS = IN_CI and ["3.6", "3.7", "3.8"]
 
 @nox.session(python=PYTHONS)
 def test(session):
-    session.run("pytest", "-v", "-s")
+    session.run("python", "-m", "pytest", "-v", "-s")
 
 
 # def supported_pythons(classifiers_in="setup.cfg"):

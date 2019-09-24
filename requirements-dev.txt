@@ -4,4 +4,5 @@ nox
 black
 flake8
 pylint
-pytest
+# https://github.com/microsoft/vscode-python/issues/6990
+pytest==5.0.1
