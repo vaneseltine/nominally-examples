@@ -35,17 +35,18 @@ def test_against_canonical(infile, tmp_path):
     books = [clean_nb(b) for b in [observed_out, canonical_out]]
     for b in books:
         assert len(b) > 100
-        print(len(b))
 
-    diff = difflib.context_diff(*books)
-    assert not list(diff)
+    diff = list(difflib.context_diff(*books))
+    print(diff)
+    assert not diff
 
 
 def clean_nb(path):
-    lines = Path(path).read_text().splitlines()
+    lines = Path(path).read_text().lower().splitlines()
     return [l for l in lines if not is_junk(l)]
 
 
 def is_junk(l):
-    r = re.search(r"version|export|path|\.csv", l, flags=re.IGNORECASE)
+    plat_specific = re.search(r"version|export|path|\.csv", l)
+    nothing = not re.search(r"[a-z]", l)
     return bool(r)
