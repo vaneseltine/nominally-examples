@@ -7,7 +7,7 @@
 
 Nominally is a maximum-strength name parser for record linkage.
 
-These examples are all available as [live Jupyter Notebooks hosted on binder](https://nbviewer.jupyter.org/github/vaneseltine/nominally-examples/tree/master/notebooks/). No download or installation is required. 
+These examples are all available as [live Jupyter Notebooks hosted on binder](https://nbviewer.jupyter.org/github/vaneseltine/nominally-examples/tree/master/notebooks/). No download or installation is required.
 
 ### Example I. CSV
 
@@ -20,7 +20,6 @@ A short and sweet example using just builtins. First create, then process a CSV 
 As Pandas is de rigueur:
 
 [![pandas_simple.ipynb on mybinder.org](https://img.shields.io/badge/launch%20binder-pandas_simple-888.svg?style=for-the-badge&logo=jupyter&logoColor=fff&color=ff4785)](https://mybinder.org/v2/gh/vaneseltine/nominally-examples/master?filepath=notebooks%2Fpandas_simple.ipynb)
-
 
 ## Nominally
 
@@ -49,7 +48,7 @@ https://mybinder.readthedocs.io/en/latest/user-guidelines.html
 
 https://colab.research.google.com/
 
-https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/ 
+https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
 
 https://www.opentechguides.com/how-to/article/dataanalytics/179/jupyter-notebook-pandas.html
 
