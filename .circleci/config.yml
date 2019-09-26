@@ -12,22 +12,13 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements-dev.txt" }}
-
+      # We aren't caching, because I want to re-download everything to test this repo.
       - run:
           name: install dependencies
           command: |
             python3 -m venv .venv
             . .venv/bin/activate
             pip install -r requirements-dev.txt
-
-      - save_cache:
-          paths:
-            - ./.venv
-          key: v3-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "requirements-dev.txt" }}
 
       - run:
           name: nox
