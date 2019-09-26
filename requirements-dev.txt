@@ -1,7 +1,7 @@
 -r requirements.txt
 
 nox
-black
+black-nb
 flake8
 pylint
 # https://github.com/microsoft/vscode-python/issues/6990
