@@ -23,7 +23,10 @@ PYTHONS = IN_CI and ["3.6", "3.7", "3.8"]
 def test(session):
     if PYTHONS:
         session.install("-r", "requirements-dev.txt")
-    session.run("python", "-m", "pytest", "-v", "-s")
+    cmd = ["python", "-m", "pytest", "-v", "-s"]
+    if IN_CI:
+        cmd.append("--junit-xml=build/pytest/results.xml")
+    session.run(*cmd)
 
 
 # def supported_pythons(classifiers_in="setup.cfg"):
@@ -113,9 +116,10 @@ def test(session):
 #         return None
 
 
-# @nox.session(python=False)
-# def lint_black(session):
-#     session.run("python", "-m", "black", "-t", "py36", ".")
+@nox.session(python=False)
+def lint_black(session):
+    session.run("python", "-m", "black", ".")
+    session.run("black-nb", "./notebooks")
 
 
 # @nox.session(python=supported_pythons(), reuse_venv=False)

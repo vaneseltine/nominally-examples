@@ -25,3 +25,6 @@ jobs:
           command: |
             . .venv/bin/activate
             python -m nox
+
+      - store_test_results:
+          path: build/pytest
